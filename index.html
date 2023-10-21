@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Libre Baskerville Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="canvas">
+        <section class="section-one">
+            <header class="header-desktop">
+                <img src="assets/img/brand.svg" alt="A better weight" class="brand">
+                <nav class="navbar-desktop" id="navbar-desktop">
+
+                </nav>
+            </header>
+            <header class="header-mobile">
+                <div class="header-mobile-container">
+                    <img src="assets/img/brand.svg" alt="A better weight" class="brand">
+                    <div class="close" id="close">
+                        <span class="close-span"></span>
+                        <span class="close-span"></span>
+                        <span class="close-span"></span>
+                    </div>
+                </div>
+                <nav class="navbar-mobile" id="navbar-mobile"></nav>
+            </header>
+            <div class="section-one-container">
+                <div class="title-container">
+                    <div class="title">Chicago’s Free Medical Check-Up and Weight Loss Consultation</div>
+                    <div class="subtitle-mobile">Only 11 spots available!</div>
+                    <div class="counter" id="counter">
+                        <div class="counter-title">Your offer ends in:</div>
+                        <div class="counter-container" id="counter-container"></div>
+                    </div>
+                </div>
+                <p class="text-section-one">Limited spots available due to the Physicians schedule and the high demand
+                    for service. No credit card or insurance required.</p>
+                <button class="button">Book an appointment</button>
+            </div>
+            <div class="yellow-box">
+                <div class="circle-right"></div>
+                <div class="circle-mobile"></div>
+            </div>
+        </section>
+
+        <section class="sec" id="sec"></section>
+        <div class="circle-left"></div>
+    </div>
+    <script src="./app/dom.js"></script>
+    <script src="./app/countdown.js"></script>
+    <script src="./app/index.js"></script>
+</body>
+
+</html>
