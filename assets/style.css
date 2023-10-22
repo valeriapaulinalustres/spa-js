@@ -297,17 +297,16 @@ img {
 }
 
 .section-two-circle {
-  width: 169px;
-  height: 169px;
-  flex-shrink: 0;
-  stroke-width: 20px;
-  stroke: #f9f9f9;
-  color: #f9f9f9;
-  position: absolute;
-  z-index: 1000;
-  top: 15px;
-  left: 20px;
-  display: block;
+    width: 269px;
+    height: 269px;
+    flex-shrink: 0;
+    border-radius: 410px;
+    border: 28px solid #f9f9f9;
+    color: #f9f9f9;
+    position: absolute;
+    top: 900px;
+    right:170px;
+    z-index: 100;
 }
 
 .section-two-title {
@@ -329,22 +328,22 @@ img {
   border: 28px solid #f9f9f9;
   color: #f9f9f9;
   position: absolute;
-  top: 1560px;
+  top: 1450px;
   left: -190px;
   z-index: 100;
 }
 
-.section-two-circle-rigth {
-  width: 124px;
-  height: 124px;
-  flex-shrink: 0;
-  stroke-width: 28px;
-  stroke: #f9f9f9;
-  color: #f9f9f9;
-  top: 10px;
-  right: 50px;
-  z-index: 10000;
-  display: inline;
+.section-two-circle-right {
+    width: 124px;
+    height: 124px;
+    flex-shrink: 0;
+    border-radius: 410px;
+    border: 28px solid #f9f9f9;
+    color: #f9f9f9;
+    position: absolute;
+    top: 1760px;
+    right: 320px;
+    z-index: 100;
 }
 
 .faq-container {
@@ -472,12 +471,10 @@ img {
   .circle-mobile {
     width: 179px;
     height: 179px;
-    flex-shrink: 0;
-    stroke-width: 23px;
-    stroke: #fff;
+    border-radius: 289px;
+    border: 28px solid #fff;
     opacity: 0.15;
     position: absolute;
-    z-index: 10000;
     right: 112px;
     top: 452px;
     color: #fff;
@@ -713,8 +710,12 @@ img {
   }
 
   .section-two-circle {
+   display: none;
+}
+
+  /* .section-two-circle {
     display: none;
-  }
+  } */
 
   .section-two-circle-left {
     display: none;
@@ -806,18 +807,7 @@ img {
   }
 
   .circle-mobile {
-    display: inline;
-    width: 179px;
-    height: 179px;
-    flex-shrink: 0;
-    stroke-width: 23px;
-    stroke: #fff;
-    opacity: 0.15;
-    position: absolute;
-    z-index: 1;
-    right: 112px;
-    top: 452px;
-    color: #fff;
+   display: none;
   }
 
   .section-one-container {
@@ -1058,14 +1048,26 @@ img {
   /* Section Two */
   .section-two {
     width: 375px;
-    overflow-y: hidden;
+    overflow-y: hidden; 
     z-index: -1;
     padding: 0 47px;
     position: absolute;
+    /* padding: 0 190px 0 190px;
+    width: 820px;
+    overflow-x: hidden; */
   }
 
-  .section-two-circle {
-    display: none;
+  .section-two-circle-only-mobile {
+    width: 169px;
+    height: 169px;
+    flex-shrink: 0;
+    border-radius: 410px;
+    border: 28px solid #f9f9f9;
+    color: #f9f9f9;
+    position: absolute;
+    top: 20px;
+    left: 280px;
+    z-index: 100;
   }
 
   .section-two-title {
@@ -1078,9 +1080,6 @@ img {
     z-index: 1000;
   }
 
-  .section-two-circle {
-    display: none;
-  }
 
   .section-two-circle-left {
     display: none;
