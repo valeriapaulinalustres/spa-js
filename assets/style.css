@@ -373,7 +373,14 @@ cursor: pointer;
 overflow-y: hidden;
 }
 
+.faq-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 
+}
 
 .faq-title {
     color: #333;
@@ -383,7 +390,7 @@ overflow-y: hidden;
     font-weight: 500;
     line-height: 172.5%; 
    text-align: left;
-   width: 100%;
+   width: 90%;
    position: relative;
    overflow-y: hidden;
 }
@@ -408,7 +415,16 @@ height: 0;
     height: 180px;
   }
 
-.faq-subcontainer.active .faq-title::after {
+  .arrow {
+    width: 20px;
+    height: 10px;
+    content: url('../assets/img/arrow.svg');
+  }
+  .faq-subcontainer.active .arrow{
+    transform: rotate(180deg);
+  }
+
+/* .faq-subcontainer.active .faq-title::after {
     content: url('../assets/img/arrow.svg');
     width: 12px;
     height: 6px;
@@ -427,7 +443,7 @@ height: 0;
     right: 30px;
   
     transform: translateY(-50%);
-  }
+  } */
 
 
 
@@ -809,7 +825,7 @@ margin: 65px 0 44px 0;
 .faq-title {
     
     font-weight: 400;
-width: 100%;
+width: 90%;
    font-size: 15px;
 }
 
@@ -836,8 +852,13 @@ height: 0;
     height: 375px;
   }
 
+  .arrow {
+    width: 12px;
+    height: 6px;
+    content: url('../assets/img/arrow-tablet.svg');
+  }
   
-.faq-subcontainer.active .faq-title::after {
+/* .faq-subcontainer.active .faq-title::after {
     content: url('../assets/img/arrow-tablet.svg');
     width: 12px;
     height: 6px;
@@ -858,8 +879,9 @@ height: 0;
   
     transform: translateY(-50%);
   
-    /* transform: translateY(-50%); */
+   
   }
+   */
 
 
 /* .arrow{
@@ -1291,7 +1313,7 @@ width: 308px;
 .faq-title {
     font-size: 14px;
     font-weight: 400;
-
+width: 85%;
    
 }
 /* 
@@ -1317,7 +1339,7 @@ width: 308px;
     transform: translateY(-50%);
 } */
 
-  
+/*   
 .faq-subcontainer.active .faq-title::after {
     content: url('../assets/img/arrow-tablet.svg');
     width: 12px;
@@ -1339,15 +1361,21 @@ width: 308px;
   
     transform: translateY(-50%);
   
-    /* transform: translateY(-50%); */
-  }
+ 
+  } */
+
+  
 
 .faq-subcontainer.active .faq-text {
     padding-top: 20px;
     height: 530px;
     
   }
-
+  .arrow {
+    width: 12px;
+    height: 6px;
+    content: url('../assets/img/arrow-tablet.svg');
+  }
 
 /* .arrow{
     width: 20px;

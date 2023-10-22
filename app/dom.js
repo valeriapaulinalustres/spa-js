@@ -37,7 +37,7 @@ const faqs = [
       text: "Lorem ipsum dolor sit amet consectetur adipiscing elit velit, lacinia ullamcorper phasellus cursus metus torquent fringilla, curabitur tristique varius blandit sociosqu molestie proin. Enim bibendum vivamus proin sed curabitur, torquent turpis et curae vulputate facilisis, malesuada semper velit fringilla. Duis tempor hac eget eros et egestas, potenti est curabitur mus nibh tristique inceptos, a primis nostra aliquet torquent.Cras augue consequat dapibus viverra vulputate et lacinia ornare fusce facilisi nullam, mauris ad nisi semper turpis tortor eleifend erat pharetra condimentum. Integer nisl convallis mollis potenti duis molestie posuere ad, ut phasellus praesent vitae a porta accumsan penatibus vulputate, facilisi nascetur curae id malesuada hendrerit justo. Sodales dignissim rhoncus nam risus blandit suscipit, imperdiet habitant purus nullam consequat, venenatis ullamcorper nostra interdum natoque."
    }, 
    {
-      name:  `Do I need this if I’ve had my yearly medical check? \n What is the difference?`,
+      name:  `Do I need this if I’ve had my yearly medical check?  What is the difference?`,
       state: false,
       id: "faq-subcontainer-1",
       text: "Lorem ipsum dolor sit amet consectetur adipiscing elit velit, lacinia ullamcorper phasellus cursus metus torquent fringilla, curabitur tristique varius blandit sociosqu molestie proin. Enim bibendum vivamus proin sed curabitur, torquent turpis et curae vulputate facilisis, malesuada semper velit fringilla. Duis tempor hac eget eros et egestas, potenti est curabitur mus nibh tristique inceptos, a primis nostra aliquet torquent.Cras augue consequat dapibus viverra vulputate et lacinia ornare fusce facilisi nullam, mauris ad nisi semper turpis tortor eleifend erat pharetra condimentum. Integer nisl convallis mollis potenti duis molestie posuere ad, ut phasellus praesent vitae a porta accumsan penatibus vulputate, facilisi nascetur curae id malesuada hendrerit justo. Sodales dignissim rhoncus nam risus blandit suscipit, imperdiet habitant purus nullam consequat, venenatis ullamcorper nostra interdum natoque."
@@ -55,7 +55,7 @@ const faqs = [
       text: "Lorem ipsum dolor sit amet consectetur adipiscing elit velit, lacinia ullamcorper phasellus cursus metus torquent fringilla, curabitur tristique varius blandit sociosqu molestie proin. Enim bibendum vivamus proin sed curabitur, torquent turpis et curae vulputate facilisis, malesuada semper velit fringilla. Duis tempor hac eget eros et egestas, potenti est curabitur mus nibh tristique inceptos, a primis nostra aliquet torquent.Cras augue consequat dapibus viverra vulputate et lacinia ornare fusce facilisi nullam, mauris ad nisi semper turpis tortor eleifend erat pharetra condimentum. Integer nisl convallis mollis potenti duis molestie posuere ad, ut phasellus praesent vitae a porta accumsan penatibus vulputate, facilisi nascetur curae id malesuada hendrerit justo. Sodales dignissim rhoncus nam risus blandit suscipit, imperdiet habitant purus nullam consequat, venenatis ullamcorper nostra interdum natoque."
    }, 
    {
-      name:   "What if I have to cancel or if I’m not sure I’ll be able \n to make it?", 
+      name:   "What if I have to cancel or if I’m not sure I’ll be able to make it?", 
       state: false,
       id: "faq-subcontainer-4",
       text: "Lorem ipsum dolor sit amet consectetur adipiscing elit velit, lacinia ullamcorper phasellus cursus metus torquent fringilla, curabitur tristique varius blandit sociosqu molestie proin. Enim bibendum vivamus proin sed curabitur, torquent turpis et curae vulputate facilisis, malesuada semper velit fringilla. Duis tempor hac eget eros et egestas, potenti est curabitur mus nibh tristique inceptos, a primis nostra aliquet torquent.Cras augue consequat dapibus viverra vulputate et lacinia ornare fusce facilisi nullam, mauris ad nisi semper turpis tortor eleifend erat pharetra condimentum. Integer nisl convallis mollis potenti duis molestie posuere ad, ut phasellus praesent vitae a porta accumsan penatibus vulputate, facilisi nascetur curae id malesuada hendrerit justo. Sodales dignissim rhoncus nam risus blandit suscipit, imperdiet habitant purus nullam consequat, venenatis ullamcorper nostra interdum natoque."
@@ -110,10 +110,10 @@ for (let i = 0; i < faqs.length; i++) {
   
     faq.addEventListener("click", openFaq)
 
-// const img = document.createElement('img')
-//     img.src = "assets/img/arrow.svg"
-//     img.alt = "Drop down"
-//     img.classList.add("arrow")
+const img = document.createElement('img')
+   // img.src = "assets/img/arrow.svg"
+    img.alt = "Drop down"
+    img.classList.add("arrow")
 
     const title = document.createElement("div")
     title.innerText = faqs[i].name
@@ -123,9 +123,16 @@ for (let i = 0; i < faqs.length; i++) {
     text.innerText = faqs[i].text
     text.classList.add('faq-text')
 
+
+    const container = document.createElement("div")
+    container.classList.add("faq-inner")
   
-    faq.appendChild(title)
+    container.appendChild(title)
+    container.appendChild(img)
+    faq.appendChild(container)
     faq.appendChild(text)
+    
+   // faq.appendChild(title)
 //faq.appendChild(img)
    faqContainer.appendChild(faq)
 }
