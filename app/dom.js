@@ -115,7 +115,7 @@ for (let i = 0; i < faqs.length; i++) {
 //     img.alt = "Drop down"
 //     img.classList.add("arrow")
 
-    const title = document.createElement("p")
+    const title = document.createElement("div")
     title.innerText = faqs[i].name
     title.classList.add("faq-title")
 
