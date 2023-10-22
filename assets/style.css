@@ -809,8 +809,8 @@ margin: 65px 0 44px 0;
 .faq-title {
     
     font-weight: 400;
-
-   
+width: 100%;
+   font-size: 15px;
 }
 
 
@@ -842,6 +842,8 @@ height: 0;
     width: 12px;
     height: 6px;
     transform: rotate(180deg);
+    top: 70%;
+    right: 10px;
   }
 
   
@@ -849,7 +851,12 @@ height: 0;
     content: url('../assets/img/arrow-tablet.svg');
     width: 12px;
     height: 6px;
+     
+    position: absolute;
+    top: 10%;
+    right: 10px;
   
+    transform: translateY(-50%);
   
     /* transform: translateY(-50%); */
   }
@@ -1287,30 +1294,60 @@ width: 308px;
 
    
 }
-
+/* 
 .faq-title::after {
     content: url('../assets/img/arrow-tablet.svg');
     width: 12px;
     height: 6px;
+    top: 70%;
+    right: 10px;
+    
+  }
+
   
+.faq-subcontainer.active .faq-title::after {
+    content: url('../assets/img/arrow-tablet.svg');
+    width: 12px;
+    height: 6px;
+    transform: rotate(180deg);
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    transform: rotate(180deg);
+    transform: translateY(-50%);
+} */
+
+  
+.faq-subcontainer.active .faq-title::after {
+    content: url('../assets/img/arrow-tablet.svg');
+    width: 12px;
+    height: 6px;
+    transform: rotate(180deg);
+    top: 70%;
+    right: 10px;
+  }
+
+  
+.faq-title::after {
+    content: url('../assets/img/arrow-tablet.svg');
+    width: 12px;
+    height: 6px;
+     
+    position: absolute;
+    top: 10%;
+    right: 10px;
+  
+    transform: translateY(-50%);
   
     /* transform: translateY(-50%); */
   }
 
-
-
-
 .faq-subcontainer.active .faq-text {
     padding-top: 20px;
     height: 530px;
+    
   }
 
-.faq-subcontainer.active .faq-title::after {
-    content: url('../assets/img/arrow.svg');
-    width: 12px;
-    height: 6px;
-    transform: rotate(180deg);
-  }
 
 /* .arrow{
     width: 20px;
