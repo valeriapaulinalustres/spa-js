@@ -1,1 +1,0 @@
-export const menuList = ["About Us", "Book Online", "Weight Loss Programs", "Real Patient Stories", "Locations", "Blog", "Shop", "Subscriptions",  ]
