@@ -1,5 +1,6 @@
-const times = ['DAYS', 'HOURS', 'MINUTES', 'SECONDS'];
+const TIMES = ['DAYS', 'HOURS', 'MINUTES', 'SECONDS'];
 
+// Function to create container
 function createContainer(times) {
   const counterContainer = document.getElementById('counter-container');
 
@@ -21,39 +22,48 @@ function createContainer(times) {
 
     counterContainer.appendChild(counterSubcontainer);
   }
-  counter.appendChild(counterContainer);
 }
 
-createContainer(times);
+// Function to update counter
+function updateCounter(days, hours, minutes, seconds) {
+  const counterDays = document.getElementById('time0');
+  counterDays.innerText = days;
+  const counterHours = document.getElementById('time1');
+  counterHours.innerText = hours;
+  const counterMinutes = document.getElementById('time2');
+  counterMinutes.innerText = minutes;
+  const counterSeconds = document.getElementById('time3');
+  counterSeconds.innerText = seconds;
+}
 
-function countDown() {
+// Countdown function
+function countDown(interval) {
   const now = new Date().getTime();
   const event = new Date('Nov 24, 2023 00:00:00').getTime();
 
-  let substraction = event - now;
+  let subtraction = event - now;
 
-  const days = Math.floor(substraction / (1000 * 60 * 60 * 24));
-  const hours = Math.trunc(
-    Math.floor(substraction % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.trunc(
-    Math.floor(substraction % (1000 * 60 * 60)) / (1000 * 60)
-  );
-  const auxSeconds = Math.trunc(Math.floor(substraction % (1000 * 60)) / 1000);
-  const seconds = ('0' + auxSeconds).slice(-2);
-  const aux = [days, hours, minutes, seconds];
-
-  if (substraction < 0) {
-    clearInterval(interval);
+  if (subtraction < 0) {
+    clearInterval(interval); 
+    updateCounter(0, 0, 0, 0);
+    return;
   }
 
-  const counterDays = document.getElementById('time0');
-  counterDays.innerText = aux[0];
-  const counterMonths = document.getElementById('time1');
-  counterMonths.innerText = aux[1];
-  const counterMinutes = document.getElementById('time2');
-  counterMinutes.innerText = aux[2];
-  const counterSeconds = document.getElementById('time3');
-  counterSeconds.innerText = aux[3];
+  const days = Math.floor(subtraction / (1000 * 60 * 60 * 24));
+  const hours = Math.trunc(
+    Math.floor(subtraction % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.trunc(
+    Math.floor(subtraction % (1000 * 60 * 60)) / (1000 * 60)
+  );
+  const seconds = String(Math.trunc(Math.floor(subtraction % (1000 * 60)) / 1000)).padStart(2, '0');
+  
+  updateCounter(days, hours, minutes, seconds);
 }
-const interval = setInterval(countDown, 1000);
+
+// Create container when loading the app
+document.addEventListener('DOMContentLoaded', () => {
+  createContainer(TIMES);
+  const interval = setInterval(countDown, 1000);
+  countDown(interval);
+});

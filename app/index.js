@@ -1,22 +1,26 @@
-const hamburger = document.getElementById("hamburger")
-const headerMobile = document.getElementById("header-mobile")
-const close = document.getElementById("close")
+// DOM elements selection
+const hamburger = document.getElementById("hamburger");
+const headerMobile = document.getElementById("header-mobile");
+const close = document.getElementById("close");
 
-//Hamburger menu user interaction
-
-function openMenu () {
-  
-  headerMobile.classList.remove("menu-off")
-  headerMobile.classList.add("menu-on")
+// Function to open the menu
+function openMenu() {
+  headerMobile.classList.remove("menu-off");
+  headerMobile.classList.add("menu-on");
 }
 
-function closeMenu () {
-  headerMobile.classList.remove("menu-on")
-  headerMobile.classList.add("menu-off")
+// Function to close the menu
+function closeMenu() {
+  headerMobile.classList.remove("menu-on");
+  headerMobile.classList.add("menu-off");
 }
 
-hamburger.addEventListener("click", openMenu)
-close.addEventListener("click", closeMenu)
+// Adds event handlers to elements
+hamburger.addEventListener("click", openMenu);
+close.addEventListener("click", closeMenu);
+
+
+
 
 
 
